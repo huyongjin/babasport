@@ -1,4 +1,4 @@
-package service;
+package cn.hyj.service;
 
 import cn.hyj.bean.TestTb;
 

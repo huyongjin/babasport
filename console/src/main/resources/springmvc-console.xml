@@ -8,6 +8,8 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
+    <import resource="dubbo-consumer.xml"/>
+
     <context:component-scan base-package="cn.hyj"/>
     <mvc:annotation-driven/>
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

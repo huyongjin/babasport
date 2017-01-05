@@ -1,12 +1,12 @@
 package cn.hyj;
 
 import cn.hyj.bean.TestTb;
+import cn.hyj.service.TestTbService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import service.TestTbService;
 
 import java.util.Date;
 
@@ -24,7 +24,7 @@ public class TestTbTest {
     @Test
     public void testInsert() {
         TestTb testTb = new TestTb();
-        testTb.setName("idea1");
+        testTb.setName("idea2");
         testTb.setBirthday(new Date());
 //        testTbDao.insertTestTb(testTb);
         testTbService.addTestTb(testTb);

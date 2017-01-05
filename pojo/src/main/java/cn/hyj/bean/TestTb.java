@@ -1,11 +1,13 @@
 package cn.hyj.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by huyongjin on 2016/12/30.
  */
-public class TestTb {
+public class TestTb implements Serializable{
+    private static final long serialVersionUID = -2506478582623120579L;
     private Integer id;
     private String name;
     private Date birthday;

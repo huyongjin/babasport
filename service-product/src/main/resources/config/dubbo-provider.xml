@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+
+
+
+
+
+
+
+
+
+
+		http://code.alibabatech.com/schema/dubbo        
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+		
+	<!-- Dubbo提供方 -->
+	<!-- 1：名称  计算机 区别 唯一 -->
+	<dubbo:application name="babasport-service-product"/>
+	<!-- 2：设置注册中心  地址  zookeeper在哪里  redis ... -->
+<!-- 	<dubbo:registry address="192.168.200.128:2181,192.168.200.129:2181,192.168.200.130:2181" protocol="zookeeper"/> -->
+	<dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"/>
+	<!-- 3：dubbo://192.168.39.80:20880  默认  设置提供服务的端口号 -->
+	<dubbo:protocol port="20880" name="dubbo"/>
+	<!-- 4： 暴露实现类-->
+	<dubbo:service interface="cn.hyj.service.TestTbService" ref="testTbService"/>
+	
+	
+	
+	
+		
+</beans>

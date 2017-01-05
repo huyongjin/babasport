@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+
+
+
+
+
+
+
+
+
+
+		http://code.alibabatech.com/schema/dubbo
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!--dubbo服务提供方-->
+	<!--唯一标识-->
+	<dubbo:application name="babasport-console"/>
+	<!--注册中心地址-->
+	<dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"/>
+	<!--引用服务-->
+	<dubbo:reference interface="cn.hyj.service.TestTbService" id="testTbService"/>
+</beans>
