@@ -20,7 +20,10 @@
 	<!--唯一标识-->
 	<dubbo:application name="babasport-console"/>
 	<!--注册中心地址-->
-	<dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"/>
+	<dubbo:registry address="N/A" protocol="zookeeper" check="false"/>
 	<!--引用服务-->
-	<dubbo:reference interface="cn.hyj.service.TestTbService" id="testTbService"/>
+	<dubbo:reference interface="cn.hyj.service.TestTbService" id="testTbService"
+			url="127.0.0.1:20880"/>
+
+	<dubbo:consumer timeout="600000" check="false"/>
 </beans>
