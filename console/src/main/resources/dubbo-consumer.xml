@@ -24,6 +24,8 @@
 	<!--引用服务-->
 	<dubbo:reference interface="cn.hyj.service.TestTbService" id="testTbService"
 			url="127.0.0.1:20880"/>
+	<dubbo:reference interface="cn.hyj.service.product.BrandService" id="brandService"
+			url="127.0.0.1:20880"/>
 
 	<dubbo:consumer timeout="600000" check="false"/>
 </beans>
