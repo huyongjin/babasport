@@ -11,4 +11,5 @@ import java.util.List;
 public interface BrandDao {
     List<Brand> selectBrandListByQuery(BrandQuery brandQuery);
     Integer selectCount(BrandQuery brandQuery);
+    Brand selectBrandById(Long id);
 }

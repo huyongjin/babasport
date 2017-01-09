@@ -1,5 +1,6 @@
 package cn.hyj.service.product;
 
+import cn.hyj.bean.product.Brand;
 import cn.hyj.bean.product.BrandQuery;
 import cn.hyj.dao.product.BrandDao;
 import cn.itcast.common.page.Pagination;
@@ -51,5 +52,10 @@ public class BrandServiceImpl implements BrandService {
         pagination.pageView(url, params.toString());
 
         return pagination;
+    }
+
+    @Override
+    public Brand selectBrandById(Long id) {
+        return brandDao.selectBrandById(id);
     }
 }

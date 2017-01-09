@@ -21,7 +21,7 @@
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						<span class="pn-frequired">*</span>
 						品牌名称:</td><td width="80%" class="pn-fcontent">
-						<input type="text" class="required" name="name" maxlength="100"/>
+						<input type="text" class="required" name="name" value="${brand.name}" maxlength="100"/>
 					</td>
 				</tr>
 				<tr>
@@ -35,28 +35,28 @@
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h"></td>
 						<td width="80%" class="pn-fcontent">
-						<img width="100" height="100" id="allUrl"/>
-						<input type="hidden" name="imgUrl" id="imgUrl"/>
+						<img width="100" height="100" id="allUrl" src="${brand.img_url}"/>
+						<input type="hidden" name="img_url" id="img_url" value="${brand.img_url}"/>
 						<input type="file" name="pic" onchange="uploadPic()"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						品牌描述:</td><td width="80%" class="pn-fcontent">
-						<input type="text" class="required" name="description" maxlength="80"  size="60"/>
+						<input type="text" class="required" name="description" value="${brand.description}" maxlength="80"  size="60"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						排序:</td><td width="80%" class="pn-fcontent">
-						<input type="text" class="required" name="sort" maxlength="80"/>
+						<input type="text" class="required" name="sort" value="${brand.sort}" maxlength="80"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						是否可用:</td><td width="80%" class="pn-fcontent">
-						<input type="radio" name="isDisplay" value="1" checked="checked"/>可用
-						<input type="radio" name="isDisplay" value="0"/>不可用
+						<input type="radio" name="is_display" value="1" <c:if test="${brand.is_display == 1}">checked="checked"</c:if>/>可用
+						<input type="radio" name="is_display" value="0" <c:if test="${brand.is_display == 0}">checked="checked"</c:if>/>不可用
 					</td>
 				</tr>
 			</tbody>

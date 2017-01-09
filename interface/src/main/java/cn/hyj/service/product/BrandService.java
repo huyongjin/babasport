@@ -1,5 +1,6 @@
 package cn.hyj.service.product;
 
+import cn.hyj.bean.product.Brand;
 import cn.itcast.common.page.Pagination;
 
 /**
@@ -7,4 +8,5 @@ import cn.itcast.common.page.Pagination;
  */
 public interface BrandService {
     Pagination selectPaginationByQuery(String name, Integer is_display, Integer pageNo);
+    Brand selectBrandById(Long id);
 }

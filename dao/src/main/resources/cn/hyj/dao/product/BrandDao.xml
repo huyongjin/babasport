@@ -31,4 +31,12 @@
       </where>
     </select>
 
+    <select id="selectBrandById" parameterType="Long" resultType="Brand">
+      select id, name, description, img_url, web_site, sort, is_display
+      from bbs_brand
+      <where>
+          id=#{id}
+      </where>
+    </select>
+
 </mapper>

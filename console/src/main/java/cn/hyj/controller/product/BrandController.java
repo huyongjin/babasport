@@ -1,5 +1,6 @@
 package cn.hyj.controller.product;
 
+import cn.hyj.bean.product.Brand;
 import cn.hyj.service.product.BrandService;
 import cn.itcast.common.page.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,14 @@ public class BrandController {
         }
 
         return "brand/list";
+    }
+
+    @RequestMapping(value = "/toEdit.do")
+    public String toEdit(Long id, Model model) {
+
+        Brand brand = brandService.selectBrandById(id);
+        model.addAttribute("brand",brand);
+
+        return "brand/edit";
     }
 }
