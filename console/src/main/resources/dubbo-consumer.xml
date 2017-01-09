@@ -26,6 +26,8 @@
 			url="127.0.0.1:20880"/>
 	<dubbo:reference interface="cn.hyj.service.product.BrandService" id="brandService"
 			url="127.0.0.1:20880"/>
+	<dubbo:reference interface="cn.hyj.service.upload.UploadService" id="uploadService"
+			url="127.0.0.1:20880"/>
 
 	<dubbo:consumer timeout="600000" check="false"/>
 </beans>
